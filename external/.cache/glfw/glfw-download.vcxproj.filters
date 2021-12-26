@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\74c35ccc69b86f85a9e70becc609c13f\glfw-download-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\5fa51cfb69737258841b2855c728a292\glfw-download-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\2c663d61e65dc9df82aba9ab401519f4\glfw-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Animation3DProjects\Assignment3\external\.cache\glfw\CMakeFiles\glfw-download" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EAE1DF3F-6A0A-3D87-816D-C165CC2EF885}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+
+D:/Animation3DProjects/Assignment3/tutorial/data/cube.obj
+D:/Animation3DProjects/Assignment3/tutorial/data/sphere.obj

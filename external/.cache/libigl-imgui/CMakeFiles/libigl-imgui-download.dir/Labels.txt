@@ -1,0 +1,14 @@
+# Target labels
+ libigl-imgui-download
+# Source files and their labels
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/libigl-imgui-download
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/d3c7db259e8acb3f1870f34c83a912d5/libigl-imgui-download.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/5cc2ca634824100bfbc78470c19ab877/libigl-imgui-download-complete.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-build.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-configure.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-download.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-install.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-mkdir.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-patch.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-test.rule
+D:/Animation3DProjects/Assignment3/external/.cache/libigl-imgui/CMakeFiles/50d706fd57da5e80505f133149ce0862/libigl-imgui-download-update.rule

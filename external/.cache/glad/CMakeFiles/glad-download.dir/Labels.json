@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/glad-download"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/3ad935427ef1c3c3e568c99dfbf03716/glad-download.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/185082cc33a44f90d0d7e5402275f427/glad-download-complete.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-build.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-configure.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-download.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-install.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-mkdir.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-patch.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-test.rule"
+		},
+		{
+			"file" : "D:/Animation3DProjects/Assignment3/external/.cache/glad/CMakeFiles/f1f269b9e2e89bea5a7b3477f3d622a0/glad-download-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glad-download"
+		],
+		"name" : "glad-download"
+	}
+}
