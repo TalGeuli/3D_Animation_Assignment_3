@@ -185,12 +185,19 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			scn->destination_position = scn->data_list[0].GetCenter();
 			std::cout << "Destination position: " << scn->destination_position <<  "\n";
 			break;
+		case 'p':
+		case 'P':
+			if (scn->isPicked)
+			{
+				std::cout << "The rotation matrix is : " << scn->data().GetRotation() << "\n";
+			}
+			else
+			{
+				std::cout << "The rotation matrix is : " << scn->GetRotation() << "\n";
+			}
+			break;
 		case GLFW_KEY_UP:
 			//rndr->TranslateCamera(Eigen::Vector3f(0, 0.01f,0));
-			//scn->RotateXAxis();
-			//scn->Set_Tip();
-			//scn->data().SetCenterOfRotation(scn->tips[scn->selected_data_index - 1]);
-			//scn->data().MyRotate(Eigen::Vector3d (1,0,0),0.05);
 			if (scn->downRotateX || scn->leftRotateY || scn->rightRotateY)
 			{
 				scn->downRotateX = false;
@@ -209,10 +216,6 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			break;
 		case GLFW_KEY_DOWN:
 			//rndr->TranslateCamera(Eigen::Vector3f(0, -0.01f,0));
-			//scn->RotateXAxis();
-			//scn->Set_Tip();
-			//scn->data().SetCenterOfRotation(scn->tips[scn->selected_data_index - 1]);
-			//scn->data().MyRotate(Eigen::Vector3d(1, 0, 0), -0.05);
 			
 			if (scn->upRotateX || scn->leftRotateY || scn->rightRotateY)
 			{
@@ -229,9 +232,6 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			
 			break;
 		case GLFW_KEY_LEFT:
-			//scn->Set_Tip();
-			//scn->data().SetCenterOfRotation(scn->tips[scn->selected_data_index - 1]);
-			//scn->data().RotateInSystem(scn->data().MakeTransd(), Eigen::Vector3d(0, 0, 1), -0.05);
 			
 			//rndr->TranslateCamera(Eigen::Vector3f(-0.01f, 0,0));
 			if (scn->upRotateX || scn->downRotateX || scn->rightRotateY)
@@ -250,9 +250,6 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			
 			
 		case GLFW_KEY_RIGHT:
-			//scn->Set_Tip();
-			//scn->data().SetCenterOfRotation(scn->tips[scn->selected_data_index - 1]);
-			//scn->data().RotateInSystem(scn->data().MakeTransd(), Eigen::Vector3d(0, 0, 1), 0.05);
 			
 			//rndr->TranslateCamera(Eigen::Vector3f(0.01f, 0, 0));
 			if (scn->upRotateX || scn->downRotateX || scn->leftRotateY)
