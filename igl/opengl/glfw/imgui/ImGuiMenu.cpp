@@ -235,7 +235,7 @@ IGL_INLINE void ImGuiMenu::draw_viewer_menu(igl::opengl::glfw::Viewer *viewer, s
           viewer->data_list.back().set_visible(false, 1);
           viewer->data_list.back().set_visible(true, 2);
           viewer->data_list.back().show_faces = 3;
-          
+
           viewer->parents[viewer->parents.size() - 1] = viewer->data_list.size() - 2;
           viewer->data().MyTranslate(Eigen::Vector3d(0, 0, 1.6), true);
           viewer->link_number++;
