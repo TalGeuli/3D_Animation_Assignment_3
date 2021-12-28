@@ -192,7 +192,7 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			break;
 		case 'p':
 		case 'P':
-			if(scn->isPicked)
+			if(!scn->isPicked)
 				rotMatrix = scn->data().GetRotation();
 			else
 				rotMatrix = scn->GetRotation();
