@@ -111,18 +111,27 @@ void SandBox::Animate()
 			Set_Tip();
 		}
 		if (ccdMove) {
+		
 			destination_position = data_list[0].GetCenter();
-			if ((tips[link_number] - destination_position).norm() >= 0.1) {
+			if ((tips[0] - destination_position).norm() > 1.6 * link_number) {
+				std::cout << "Can not reach" << "\n";
+				ccdMove = false;
+				return;
+			}
+			if ((tips[link_number] - destination_position).norm() >= 0.1)
+			{
 				for (int i = link_number - 1; i > 0; i--)
 				{
 					Eigen::Vector3d E = tips[link_number];
 					Eigen::Vector3d R = tips[i];
 					Eigen::Vector3d D = destination_position;
 					CCD(R, E, D, i);
-					if ((tips[link_number] - destination_position).norm() < 0.1)
-						break;
+
 				}
 			}
+			Fix_rotarion();
+
+			
 						
 		}
 
@@ -139,7 +148,9 @@ void SandBox::Animate()
 					forward_fabrik();
 					backword_fabrik();
 					moveChain();
+					Fix_rotarion();
 				}
+				
 			}
 	}
 }

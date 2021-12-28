@@ -110,7 +110,12 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 {
 	Renderer* rndr = (Renderer*) glfwGetWindowUserPointer(window);
 	SandBox* scn = (SandBox*)rndr->GetScene();
-	//Eigen::Vector3d O = (scn->data_list[1].MakeTransd() * Eigen::Vector4d(0, 0, 0, 1)).head(3);
+	//-------For the euler angles-----
+	Eigen::Matrix3d rotMatrix;
+	Eigen::Vector3d V(0, 0, 1);
+	Eigen::Vector3d euler_angle;
+	float phi, theta;
+	//-------For the euler angles-----
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 
@@ -187,14 +192,17 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			break;
 		case 'p':
 		case 'P':
-			if (scn->isPicked)
-			{
-				std::cout << "The rotation matrix is : " << scn->data().GetRotation() << "\n";
-			}
+			if(scn->isPicked)
+				rotMatrix = scn->data().GetRotation();
 			else
-			{
-				std::cout << "The rotation matrix is : " << scn->GetRotation() << "\n";
-			}
+				rotMatrix = scn->GetRotation();
+			euler_angle = rotMatrix.eulerAngles(2, 0, 2);
+			phi = euler_angle[2];
+			theta = euler_angle[0];
+			std::cout << "Phi (Z angle) is : " << phi << "\n";
+			std::cout << "Theta (X angle) is : " << theta << "\n";
+			//std::cout << "another angle is : " << euler_angle[1] << "\n";
+			
 			break;
 		case GLFW_KEY_UP:
 			//rndr->TranslateCamera(Eigen::Vector3f(0, 0.01f,0));
@@ -275,7 +283,7 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 				if ((scn->destination_position - scn->tips[0]).norm() <= 1.6 * scn->link_number)
 					std::cout << "The distance is:" << (scn->destination_position - scn->tips[0]).norm() << "\n";
 				else
-					std::cout << "Cannot reach" << "\n";
+					std::cout << "Can not reach" << "\n";
 			}
 			else
 				scn->fabrikMove = false;
@@ -283,7 +291,7 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 
 			break;
 		case '1':
-			if (!scn->ccdMove)
+			if (!scn->ccdMove) 
 				scn->ccdMove = true;
 			else
 				scn->ccdMove = false;

@@ -179,15 +179,22 @@ namespace glfw
 
   void Viewer::CCD(Eigen::Vector3d R, Eigen::Vector3d E, Eigen::Vector3d D, int R_index)
   {
-           
-      Eigen::Vector3d base = E;
-      Eigen::Vector3d baseToTip = R - base;
-      Eigen::Vector3d baseToDestination = R - destination_position;
-      double angle = acos(baseToTip.normalized().dot(baseToDestination.normalized()));
-      Eigen::Vector3d almostrotVec = baseToTip.cross(baseToDestination);
-      Eigen::Vector4d rotVec(almostrotVec(0), almostrotVec(1), almostrotVec(2), 0);
-      data_list[R_index].MyRotate(((CalcParentsTrans(R_index) * data_list[R_index].MakeTransd()).inverse() * rotVec).head(3), angle / 10);
-      Set_Tip();
+          
+          Eigen::Vector3d base = tips[link_number];
+          Eigen::Vector3d baseToTip = R - base;
+          Eigen::Vector3d baseToDestination = R - D;
+          double almost_angle = baseToTip.normalized().dot(baseToDestination.normalized());
+          if (almost_angle > 1)
+              almost_angle = 1;
+          if (almost_angle < -1)
+              almost_angle = -1;
+          double angle = acos(baseToTip.normalized().dot(baseToDestination.normalized()));
+          Eigen::Vector3d almostrotVec = baseToTip.cross(baseToDestination);
+          Eigen::Vector4d rotVec(almostrotVec(0), almostrotVec(1), almostrotVec(2), 0);
+          data_list[R_index].MyRotate(((CalcParentsTrans(R_index) * data_list[R_index].MakeTransd()).inverse() * rotVec).head(3), angle / 10);
+          Set_Tip();
+     
+     
       
       
   }
@@ -247,8 +254,25 @@ namespace glfw
           data_list[i + 1].MyRotate(((CalcParentsTrans(i + 1) * data_list[i + 1].MakeTransd()).inverse() * rotVec).head(3), angle / 10);
           Set_Tip();
       }
+      
   }
 
+  void Viewer::Fix_rotarion()
+  {
+      Eigen::Vector3d V(0, 0, 1);
+      for (int i = 1; i <= link_number; i++)
+      {
+          Eigen::Matrix3d rotMatrix = data_list[i].GetRotation();
+          Eigen::Vector3d euler_angle = rotMatrix.eulerAngles(2, 0, 2);
+          float z = euler_angle[2];
+          data_list[i].MyRotate(V, -z);
+          if (i<link_number)
+            data_list[i+1].RotateInSystem(V, z);
+
+      }
+  }
+
+  
   //--------------------------------------------------------Assignment 3----------------------------
 
 

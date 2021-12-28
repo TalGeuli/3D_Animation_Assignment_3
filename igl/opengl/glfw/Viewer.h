@@ -57,6 +57,8 @@ namespace glfw
     void Viewer::backword_fabrik();
     void Viewer::forward_fabrik();
     void Viewer::moveChain();
+    void Viewer::Fix_rotarion();
+    
 
     //------------------------------------------Assignment 3---------------------------------------------
     
